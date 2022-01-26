@@ -46,16 +46,6 @@ const Cart = ({ress,res}) => {
     getTotal()
   },[cart])
   
-
-//   const handleOngkir = async () => {
-
-//     dispatch({ type: 'NOTIFY', payload: {loading: true} })
-
-//     postCurir({ asal, ongkirtujuan,berat})
-//     .then(res => {
-//       console.log(res)
-//   })
-// }
   
   const handlePayment = async () => {
 
@@ -81,7 +71,9 @@ const Cart = ({ress,res}) => {
   }
 
   if( cart.length === 0 )
-  return <Link href="/"><img className="" src="/empty_cart.jpg" alt="not empty"/></Link>
+  return <Link href="/profiles"><button className='btn btn-info d-block mx-auto mb-4 mt-5'>KEMBALI KE DASBOARD</button>
+  
+  </Link>
     return(
       <div className="relative min-h-screen md:flex">  {/* mobile menu bar */}
       <Modal/>
@@ -111,39 +103,7 @@ const Cart = ({ress,res}) => {
             <form>
               <h2>Pembayaran</h2>
             </form>
-            {/* <label htmlFor="address" className='mb-2'>Kota Asal</label>
-            <br></br>
-            <select className="w-64 text-xl border-1" placeholder="Pembayaran">
-                  <option hidden="hidden" value="0">Pilih Kota</option>
-                {res.rajaongkir.results.map(ongkirkota => (
-                  <option key={ongkirkota._id} value={ongkirkota.city_name} onChange={e => setOngkirasal(e.target.value)}>
-                    {ongkirkota.city_name}
-                    
-                  </option>
-                ))
-              } 
-                </select>
-                <br></br>
-                <label htmlFor="address" className='mb-2'>Kota Tujuan</label>
-            <br></br>
-            <select className="w-64 text-xl border-1" placeholder="Pembayaran">
-                  <option hidden="hidden" value="0">Pilih Kota</option>
-                {res.rajaongkir.results.map(ongkirkota => (
-                  <option key={ongkirkota._id} value={ongkirkota.city_name} onChange={e => setOngkirtujuan(e.target.value)} >
-                    {ongkirkota.city_name}
-                  </option>
-                ))
-              } 
-                </select>
-              <br></br>
-              <label htmlFor="berat">Berat Barang</label>
-              <input type="text" name="berat" id="berat"
-              className="form-control mb-2" value={berat}
-              onChange={e => setBerat(e.target.value)} />
-
-              <Link href={auth.user ? '#!' : '/logins'}>
-              <a className="btn btn-dark my-2" onClick={handleOngkir}>Cek ongkir</a>
-            </Link> */}
+            
              <div className='mt-4'>
             <h3>Total: <span className="text-danger">{total}</span></h3>
 
