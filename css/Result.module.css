@@ -1,0 +1,62 @@
+.result {
+	border-radius: 8px;
+	padding: 24px 25px;
+	margin-bottom: 22px;
+	border: 2px solid #b8bec5;
+	box-shadow: 6px 6px 1px 1px #b8bec5;
+}
+
+.courier__name {
+	color: #473a3a;
+	font-size: 26px;
+	font-weight: bold;
+	margin-bottom: 8px;
+	letter-spacing: 1px;
+}
+
+.courier {
+	margin-bottom: 19px;
+}
+
+.origin__label,
+.service__detail,
+.courier__stand_for {
+	color: #524d4d;
+	font-weight: 500;
+}
+
+.service__name {
+	color: #473a3a;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 8px;
+	letter-spacing: 1px;
+}
+
+.price {
+	color: #3d373d;
+	font-size: 28px;
+	margin-top: 26px;
+	font-weight: bold;
+}
+
+.origin {
+	margin-bottom: 20px;
+}
+
+.origin:last-child {
+	margin-bottom: 0%;
+}
+
+.place {
+	margin-top: 29px;
+}
+
+.origin__label {
+	margin-bottom: 7px;
+}
+
+.origin__place {
+	color: #3d373d;
+	font-weight: bold;
+}

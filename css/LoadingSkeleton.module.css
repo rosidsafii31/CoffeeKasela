@@ -1,0 +1,33 @@
+.card {
+	width: 100%;
+	padding: 30px;
+	border-radius: 8px;
+	margin-bottom: 42px;
+	box-sizing: border-box;
+	background-color: #ffffff;
+	border: 2px solid #b8bec5;
+	box-shadow: 6px 6px 1px 1px #b8bec5;
+}
+
+.card__block {
+	width: 100%;
+	border-radius: 4px;
+	animation: loading 1s ease-in-out infinite;
+}
+
+@keyframes loading {
+	0% {
+		transform: scale(1);
+		background-color: rgba(165, 165, 165, 0.3);
+	}
+
+	50% {
+		transform: scale(1.01);
+		background-color: rgba(165, 165, 165, 0.6);
+	}
+
+	100% {
+		transform: scale(1);
+		background-color: rgba(165, 165, 165, 0.3);
+	}
+}

@@ -1,0 +1,16 @@
+.header {
+	text-align: center;
+}
+
+.header__title {
+	color: #473a3a;
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.header__desc {
+	color: #524d4d;
+	font-size: 18px;
+	font-weight: 600;
+}
