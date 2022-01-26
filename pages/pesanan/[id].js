@@ -91,7 +91,7 @@ export default function Pesananan({order}) {
             $(this).attr('href', url_wa + '?phone=62 ' + tujuan + '&text=' +
                    ' Detail Pesananan :  ' + '%0A'+ '%0A'  + namaproduk +
                    '_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _%0A' + 
-                   ' Total Bayar :  ' + 'Rp.'+ totals + '%0A'+
+                   ' Total Bayar :  ' + 'Rp.'+ totals + ' ( Belum Termasuk Ongkir )'+'%0A'+
                    ' Bank Pembayaran :  ' + licensi + '%0A' +
                    '_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _%0A' +
                    ' Nama :  ' + nama + '%0A'+ 
