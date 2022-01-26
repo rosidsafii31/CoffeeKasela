@@ -71,7 +71,7 @@ const Cart = ({ress,res}) => {
   }
 
   if( cart.length === 0 )
-  return <Link href="/profiles"><button className='btn btn-info d-block mx-auto mb-4 mt-5'>KEMBALI KE DASBOARD</button>
+  return <Link href="/order"><button className='btn btn-info d-block mx-auto mb-4 mt-5'>KEMBALI KE DASBOARD</button>
   
   </Link>
     return(

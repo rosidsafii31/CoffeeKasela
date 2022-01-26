@@ -40,20 +40,6 @@ const OrderDetail = ({orderDetail, state, dispatch}) => {
                         <p>Email: {order.user.email}</p>
                         <p>No Whatsapp: {order.user.nomorwa}</p>
 
-                        <div className={`alert ${order.status ? 'alert-success' : 'alert-danger'}
-                        d-flex justify-content-between align-items-center`} role="alert">
-                            {
-                                order.status ? `Deliverd on ${order.updatedAt}` : 'Not Delivered'
-                            }
-                            {
-                                auth.user.role === 'admin' && !order.status &&
-                                <button className="btn btn-dark text-uppercase"
-                                onClick={() => handleDelivered(order)}>
-                                    Mark as delivered
-                                </button>
-                            }
-                            
-                        </div>
 
                         <div>
                             <h3>Order Items</h3>
