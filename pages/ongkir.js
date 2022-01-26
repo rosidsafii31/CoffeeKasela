@@ -37,7 +37,7 @@ export default function App() {
 			window.scrollTo(0, 1240);
 		});
 
-		fetch("http://localhost:3000/api/rajaongkir", {
+		fetch(`${process.env.BASE_URL}/api/rajaongkir`, {
 			method: "POST",
 			body: JSON.stringify({ origin, destination, weight, courier }),
 		})
