@@ -124,9 +124,9 @@ export default function Pesananan({order}) {
               <div className="flex mr-2">
                 <Link href={`/cart`}>
                 <a>
-                  <button className="px-3 mt-1  bg-gray-500 hover:bg-gray-300  text-white hover:text-black  tracking-wider  rounded">
+                  {/* <button className="px-3 mt-1 bg-gray-500 hover:bg-gray-300  text-white hover:text-black  tracking-wider  rounded">
                     Close
-                  </button>
+                  </button> */}
                 </a>
                 </Link>
               </div>
