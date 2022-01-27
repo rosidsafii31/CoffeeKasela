@@ -106,7 +106,9 @@ const Cart = ({ress,res}) => {
             
              <div className='mt-4'>
             <h3>Total: <span className="text-danger">{total}</span></h3>
-
+            <Link href={auth.user ? '#!' : '/ongkir'}>
+              <a className="btn btn-dark my-2" >Cek Ongkir</a>
+            </Link>
             <Link href={auth.user ? '#!' : '/logins'}>
               <a className="btn btn-dark my-2" onClick={handlePayment}>Bayar</a>
             </Link>
