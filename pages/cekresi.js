@@ -73,7 +73,7 @@ const Curir = () => {
               onChange={e => setAwb(e.target.value)} />
             </form>
             <button>
-              <a className="btn btn-dark my-2" onClick={handlePayment}>Proceed with payment</a>
+              <a className="btn btn-dark my-2" onClick={handlePayment}>Cek Resi</a>
               </button>
         </div>
         

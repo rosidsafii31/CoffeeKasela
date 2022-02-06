@@ -11,6 +11,10 @@ const orderSchema = new mongoose.Schema({
         type: String,
         default: 'kosong'
     },
+    jasapengiriman: {
+        type: String,
+        default: 'kosong'
+    },
     status: {
         type: Boolean,
         default: false

@@ -46,13 +46,13 @@ export default function Artikel({artikel,result}) {
             </div>
           )})}
       </div>
-      {
+      <div className='flex justify-center'>{
               result < page * 6 ? ""
-              : <button className='btn btn-info d-block mx-auto mb-4 mt-5'
+              : <button className='bg-blue-700 hover:bg-blue-600 d-block px-5 py-3 mt-2 mb-5 text-white'
               onClick={handlerSelanjutnya}>
                 Selanjutnya
                 </button>
-            }
+            }</div>
       </Container>
     </Layout>
   );

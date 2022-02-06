@@ -32,7 +32,7 @@ export default function Home({product,artikel}) {
         </Head>
          <FeaturedPost/>
         <div className="">
-        <div className=" bg-slate-900  pb-2 ">
+        <div className=" bg-black pb-2 ">
         <p className="pt-24 pb-3 text-center font-produkjudul text-white text-4xl">KOPI KASELA GOMBENGSARI </p>
         <div className=" flex justify-end mr-5 pt-1 ">
           <button className=" bg-zinc-100 hover:bg-zinc-300  text-black font-bold py-2 px-4 border rounded">

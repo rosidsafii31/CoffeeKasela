@@ -69,9 +69,9 @@ const Signin = () => {
           
           <button type="submit" className="btn btn-dark w-100">Masuk</button>
 
-          <p className="my-2">
+          {/* <p className="my-2">
             Lupa Password ? <Link href="/lupapassword"><a style={{color: 'crimson'}}>Klik Disini</a></Link>
-          </p>
+          </p> */}
           <p className="my-2">
             Belum Punya Akun ? <Link href="/register"><a style={{color: 'crimson'}}>Daftar</a></Link>
           </p>

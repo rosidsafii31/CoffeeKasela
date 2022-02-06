@@ -76,7 +76,7 @@ export default function Navbaradmin () {
   };
 
     return (
-        <div className="sidebar bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+        <div className="sidebar bg-gradient-to-r from-green-400 to-blue-500 text-white w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
     {/* logo */}
     <a href="#" className="hover:bg-blue-600 text-white flex items-center space-x-2 px-4">
       <svg

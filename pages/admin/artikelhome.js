@@ -7,23 +7,34 @@ import Modal from '../../components/Modal'
 import Notify from '../../components/Notify'
 import Link from 'next/link'
 import {useRouter} from 'next/router'
-import {DataContext} from '../../store/GlobalState'
-import React, { useContext } from 'react'
+import {useState, useContext, useEffect} from 'react'
+import filterSearch from '../../utils/filterSearch';
 import Navbaradmin from '../../components/navbaradmin';
 
-export async function getServerSideProps() {
-  const ress = await getData('artikels')
+export async function getServerSideProps({ query }) {
+  const sort = query.sort || ''
+  const page = query.page || 1
+  
+  const ress = await getData(`artikels?limit=${page * 6}&sort=${sort}`)
   
 return {
     props:{
       artikel:ress.artikel,
       result:ress.result,
+      
     },
   }                                     
 }
 
 
-export default function Artikel({artikel}) {
+export default function Artikel({artikel,result}) {
+  const[page, setPage] = useState(1)
+  const router = useRouter()
+
+   const handlerSelanjutnya =() => {
+    setPage(page+1)
+    filterSearch({router, page : page + 1})
+   }
   return (
     <div className="relative min-h-screen md:flex ">  {/* mobile menu bar */}
     <Modal/>
@@ -38,7 +49,7 @@ export default function Artikel({artikel}) {
       </Head>
       <div className="rounded-md shadow ml-5 ">
       <Link href="/admin/createartikel" >
-                <a className="w-25 font-produk2 flex items-center justify-center px-5 py-3 border border-transparent text-lg rounded-md text-white bg-orange-500 hover:bg-orange-600 ">
+                <a className="w-25 font-produk2 flex items-center justify-center px-5 py-3 border border-transparent text-lg rounded-md text-white bg-blue-700 hover:bg-blue-600  ">
             Tambah Artikel
                 </a>
                 </Link>
@@ -51,15 +62,14 @@ export default function Artikel({artikel}) {
             </div>
           )})}
        </div>
-          {/* <div className=" flex justify-center space-x-4 mb-10 ">
-          <button className='bg-gray-darkl hover:bg-gray text-xl font-produk3 p-2 rounded-lg' 
-          onClick={() => router.push(`/artikel/?page=${page - 1}`)} 
-          disabled={page <= 1}>Previous</button>
-          <button className='bg-gray-darkl hover:bg-gray text-xl font-produk3 p-2 rounded-lg'
-          onClick={() => router.push(`/artikel/?page=${page + 1}`)}
-          disabled={page >= lastpage}>Next</button>
-          </div> */}
-      
+       <div className='flex justify-center '>{
+              result < page * 6 ? ""
+              : <button className='bg-blue-700 hover:bg-blue-600 font-produk2 text-lg rounded-md d-block px-5 py-3 mt-2 text-white'
+              onClick={handlerSelanjutnya}>
+                Selanjutnya
+                </button>
+            }</div>
+
   </div>
 </div>
       

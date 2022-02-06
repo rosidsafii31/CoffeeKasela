@@ -12,8 +12,6 @@ function Pemesanan() {
     const {state, dispatch} = useContext(DataContext)
     const { auth, notify, orders } = state
 
-
-
     return (
         <div className="relative min-h-screen md:flex ">  {/* mobile menu bar */}
       <Modal/>
@@ -28,7 +26,7 @@ function Pemesanan() {
 <div className="my-3 table-responsive">
         <ReactHTMLTableToExcel
                     id="test-table-xls-button"
-                    className="download-table-xls btn btn-danger mb-3"
+                    className="download-table-xls btn btn-success mb-3"
                     table="table_id"
                     filename="Laporanorder"
                     sheet="tablexls"
@@ -37,7 +35,6 @@ function Pemesanan() {
     style={{minWidth: '400px', cursor: 'pointer'}}>
         <thead className="bg-gray-700 font-weight-bold text-white">
             <tr>
-            
                 <th className="p-2">Tanggal Order</th>
                 <th className="p-2">Id Order</th>
                 <th className="p-2">User</th>
@@ -55,6 +52,7 @@ function Pemesanan() {
         <tbody>
             {
                 orders.map(order => (
+                   
                     <tr key={order._id}>
                          <td className="p-2">{new Date(order.createdAt).toLocaleDateString()}</td>
                          <td className="p-2">
@@ -69,7 +67,8 @@ function Pemesanan() {
                         <td className="p-2">{order.user.nomorwa}</td>
 
                         <td className="p-2">
-                            {order.resi}
+                            <div>{order.jasapengiriman}</div>
+                            <div>{order.resi}</div>
                             </td>
 
                         <td className="p-2">
@@ -108,8 +107,10 @@ function Pemesanan() {
                         </form>
                         </td>
                     </tr> 
+                    
                 ))
             }
+            
         </tbody>
 
     </table>

@@ -38,13 +38,13 @@ const deliveredOrder = async(req, res) => {
         if(result.role !== 'admin')
         return res.status(400).json({err: 'Authentication Salah.'})
         const {id} = req.query
-        const {resi} = req.body
+        const {resi,jasapengiriman} = req.body
         
         if(!resi)
         return res.status(400).json({err: 'Isi semua form.'})
 
         await Orders.findOneAndUpdate({_id: id}, {
-            resi
+            resi,jasapengiriman
         })
 
         res.json({msg: 'Update Sukses'})

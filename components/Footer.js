@@ -33,21 +33,21 @@ export default function Footer() {
         
                 <ul className=" text-gray-lightest font-produk2 font-semibold text-xl flex items-center  flex-col space-y-4">
                 <li>
-                  <Link href="/">
+                  <Link href="https://instagram.com/kaselacoffee?utm_medium=copy_link">
                     <a className="hover:underline md:text-2xl md:font-produk2  ">
                       Instagram
                     </a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/">
+                  <Link href="https://www.facebook.com/profile.php?id=100074329173783">
                     <a className="hover:underline md:text-2xl md:font-produk2  ">
                       Facebook
                     </a>
                   </Link>
                   </li>
                   <li>
-                  <Link href="/">
+                  <Link href="https://youtube.com/channel/UCIXY0_lGWR15cvfWV2jE8XA">
                     <a className="hover:underline md:text-2xl md:font-produk2  ">
                       Youtube
                     </a>

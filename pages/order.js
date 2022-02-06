@@ -49,6 +49,7 @@ const Profiles = () => {
                                             </td>
                                             <td className="p-2">{order.total}</td>
                                             <td className="p-2">
+                                              <div>{order.jasapengiriman}</div>
                                                {order.resi}
                                             </td>
                                         </tr> 

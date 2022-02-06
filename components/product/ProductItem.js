@@ -52,7 +52,7 @@ export default function CardProduk({product}) {
   return (
     <article className="bg-green-400 p-10 " >
       <Link href={`/product/${product._id}`} >
-        <div className="border-solid border-8 border-blue-dark " >
+        <div className="border-solid border-4 border-green-900 " >
           <img src={product.img[0].url} className="w-full  max-h-40 object-contain content-center mt-3 mb-3" />
         </div>
       </Link>

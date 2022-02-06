@@ -9,9 +9,10 @@ const OrderDetail = ({orderDetail, state, dispatch}) => {
     const {auth, orders} = state
     const initialState = {
         resi: '',
+        jasapengiriman: '',
     }
     const [orderan, setResi] = useState(initialState)
-    const {resi} = orderan
+    const {resi,jasapengiriman} = orderan
 
     const router = useRouter()
     const {id} = router.query
@@ -63,6 +64,10 @@ const OrderDetail = ({orderDetail, state, dispatch}) => {
                     <input type="text" name="resi" value={resi}
                     placeholder="Masukkan No Resi" className="d-block w-100 form-control mb-2 "
                     onChange={handleChangeInput} />
+                     <input type="text" name="jasapengiriman" value={jasapengiriman}
+                    placeholder="Masukkan Jasa Pengiriman" className="d-block w-100 form-control mb-2 "
+                    onChange={handleChangeInput} />
+                    
   
 
                     <button type="submit" className="btn btn-info my-2 px-4 fw-bold">
