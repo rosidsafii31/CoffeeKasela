@@ -104,7 +104,7 @@ const Profile = () => {
                 <title>Profile</title>
             </Head>
              
-                <div className="mx-auto my-4 border-4 border-black bg-orange-400" style={{maxWidth: '500px'}}>
+                <div className="mx-auto my-4 border-4 border-black " style={{maxWidth: '500px'}}>
                     <h3 className="text-center text-uppercase">
                         {auth.user.role === 'user' ? 'User Profile' : 'Admin Profile'}
                     </h3>
