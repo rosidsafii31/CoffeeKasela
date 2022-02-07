@@ -44,14 +44,14 @@ export default function Detail({product}) {
           <div className="text-4xl pb-3 font-produk4 ">{`Rp.${product.harga}`}</div>
           <div>
           <button  onClick={() => dispatch(addToCart(product, cart))} 
-            className="px-5 py-3  text-black  bg-orange-500 hover:bg-orange-600 font-produk2 font-bold tracking-wider rounded"
+            className="px-5 py-3  text-white hover:text-white  bg-blue-700 hover:bg-blue-600 font-produk2 font-bold tracking-wider rounded"
           >
             Masuk Keranjang
           </button>
           </div>
           <div className='mt-3'>
           <Link href="/produk" >
-                <button className="font-produk2 font-bold flex items-center justify-center px-5 py-3 rounded-md text-black hover:text-white  bg-blue-700 hover:bg-blue-600">
+                <button className="font-produk2 font-bold flex items-center justify-center px-5 py-3 rounded-md text-white hover:text-white  bg-blue-700 hover:bg-blue-600">
           Produk Lain
                 </button>
                 </Link>
